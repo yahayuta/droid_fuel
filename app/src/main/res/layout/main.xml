@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+   	
+   	     <com.google.android.gms.ads.AdView
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    ads:adUnitId="ca-app-pub-4280826531916194/7080368700"
+    ads:adSize="SMART_BANNER"/>
+   	     
+   	<ScrollView android:id="@+id/ScrollView01" android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/linearLayoutSub" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+	    <TextView
+	        android:id="@+id/textEditMode"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/disp_label_edit" />
+
+	    <TextView
+	        android:id="@+id/textDate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="" />
+
+		<TextView
+	        android:id="@+id/textViewOdo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/disp_label_odo" />
+
+
+
+	    <EditText
+	        android:id="@+id/editTextOdo"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	        <requestFocus />
+	    </EditText>
+	    <TextView
+	        android:id="@+id/textViewFAmount"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/disp_label_famount" />
+	    <EditText
+	        android:id="@+id/editTextFAmount"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" />
+	    <TextView
+	        android:id="@+id/textViewPrice"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/disp_label_price" />
+	    <EditText
+	        android:id="@+id/editTextPrice"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" />
+	    <Button
+	        android:id="@+id/buttonSave"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/disp_btn_save" />
+
+	    <Button
+	        android:id="@+id/buttonFwd"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/disp_btn_fwd" />
+
+	    <Button
+	        android:id="@+id/buttonRev"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/disp_btn_bwd" />
+
+	    </LinearLayout>
+    </ScrollView> 
+</LinearLayout>
