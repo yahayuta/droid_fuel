@@ -1,18 +1,14 @@
 package droid.fuel;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 
 /**
@@ -110,20 +106,6 @@ public class FuelUsageAnalyzerDetailActivity extends Activity {
         LinearLayout layout = (LinearLayout)findViewById(R.id.statLayout);
         layout.removeAllViews();
         
-        addAdView(layout);
-        
         layout.addView(lv);
-	}
-	
-	/**
-	 * adMobビューを追加する
-	 * @param layout
-	 */
-	private void addAdView(LinearLayout layout) {
-        AdView adView = new AdView(this);
-        adView.setAdUnitId("ca-app-pub-4280826531916194/7080368700");
-        adView.setAdSize(AdSize.SMART_BANNER);
-        layout.addView(adView);
-		adView.loadAd(new AdRequest.Builder().build());
 	}
 }

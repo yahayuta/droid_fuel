@@ -1,8 +1,5 @@
 package droid.fuel;
 
-import java.util.Iterator;
-import java.util.List;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentValues;
@@ -18,8 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * 燃料消費記録
@@ -29,8 +26,6 @@ public class FuelUsageAnalyzerActivity extends Activity implements OnClickListen
 	
 	/** メニューアイテムID0 */
 	private final static int MENU_ITEM0 = 0;
-	/** メニューアイテムID1 */
-	private final static int MENU_ITEM1 = 1;
 	/** メニューアイテムID2 */
 	private final static int MENU_ITEM2 = 2;
 	/** メニューアイテムID3 */
@@ -63,10 +58,6 @@ public class FuelUsageAnalyzerActivity extends Activity implements OnClickListen
         
         // 状態更新
         initStatus();
-        
-        //AdView初期化
-        AdView adView = (AdView)this.findViewById(R.id.adView);
-        adView.loadAd(new AdRequest.Builder().build());
     }
 
 	/* (non-Javadoc)
@@ -216,10 +207,6 @@ public class FuelUsageAnalyzerActivity extends Activity implements OnClickListen
 		MenuItem actionItem0 = menu.add(0, MENU_ITEM0, 0, getString(R.string.menu_detail));
 		actionItem0.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 		
-		// 給油記録グラフ追加
-		MenuItem actionItem1 = menu.add(0, MENU_ITEM1, 0, getString(R.string.menu_chart));
-		actionItem1.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
-		
 		// 給油記録新規登録メニュー追加
 		MenuItem actionItem2 = menu.add(0, MENU_ITEM2, 0, getString(R.string.menu_new));
 		actionItem2.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
@@ -246,11 +233,6 @@ public class FuelUsageAnalyzerActivity extends Activity implements OnClickListen
 				// 給油記録
 		        Intent intent = new Intent(FuelUsageAnalyzerActivity.this, FuelUsageAnalyzerDetailActivity.class);
 		        startActivity(intent);
-				return true;
-			case MENU_ITEM1:
-				// 給油記録グラフ
-		        Intent intent2 = new Intent(FuelUsageAnalyzerActivity.this, FuelUsageAnalyzerChartActivity.class);
-		        startActivity(intent2);
 				return true;
 			case MENU_ITEM2:
 				// 給油記録新規登録
