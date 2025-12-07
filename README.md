@@ -1,6 +1,6 @@
 # Droid Fuel - Fuel Usage Analyzer
 
-[![Android](https://img.shields.io/badge/Android-API%2029+-green.svg)](https://developer.android.com/about/versions/android-10)
+[![Android](https://img.shields.io/badge/Android-API%2029%20--%20API%2034-green.svg)](https://developer.android.com/about/versions/android-10)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/yourusername/droid_fuel/releases)
 
@@ -101,14 +101,15 @@ droid_fuel/
 ├── gradle/
 ├── build.gradle
 └── settings.gradle
+└── gradle.properties
 ```
 
 ## 🛠️ Technical Details
 
 ### Requirements
 - **Minimum SDK**: API 29 (Android 10)
-- **Target SDK**: API 33 (Android 13)
-- **Build Tools**: 30.0.3
+- **Target SDK**: API 34 (Android 14)
+
 - **Gradle Version**: 8.9
 
 ### Dependencies
